@@ -1,0 +1,45 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "students": [
+    {
+      "name": "Akbarjon",
+      "lastname": "Murodov",
+      "date": "2022-10-4",
+      "mark": "80",
+      "status": "Pass",
+      "id": 1
+    },
+    {
+      "name": "Lazizhon",
+      "lastname": "Zayniddinov",
+      "date": "2022-10-4",
+      "mark": "100",
+      "status": "Pass",
+      "id": 2
+    },
+    {
+      "name": "Abduxakim",
+      "lastname": "Abdupattoyev",
+      "date": "2022-10-4",
+      "mark": "50",
+      "status": "Pass",
+      "id": 3
+    }
+  ]
+}

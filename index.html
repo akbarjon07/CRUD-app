@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Exam Results</title>
+</head>
+<body>
+  <!-- HEADER -->
+
+  <header class="header">
+    <div class="container header__container">
+      <h1 class="header__title h2">Exam results</h1>
+
+      <button class="header__btn btn btn-primary">Add new student +</button>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+
+  <main class="main">
+    <section class="main__section">
+      <div class="container main__container">
+        <div class="main__left col-3">
+          <h2 class="main__left-title h3 mb-2">Filter</h2>
+
+          <form class="main__left-form">
+            <label for="name">
+              Search
+              <input type="text" class="form-search-input form-control mb-3" name="name" placeholder="Type a name... " required>
+            </label>
+
+            <label for="mark">
+              Mark
+              <div class="d-flex align-items-center">
+                <input type="text" class="mark-from-input form-control mb-3" name="mark" placeholder="From" required>
+                <input type="text" class="mark-to-input form-control mb-3 ms-2" name="mark" placeholder="To" required>
+              </div>
+            </label>
+
+            <label for="sort">
+              Sort by
+              <select class="form-sort-input form-control mb-3" required>
+                <option value="1"></option>
+                <option value="1"></option>
+                <option value="1"></option>
+              </select>
+            </label>
+
+            <button class="form-btn btn btn-primary">Filter</button>
+          </form>
+        </div>
+
+        <div class="main__right col-9">
+          <h2 class="main__right-title h3 mb-2">Students list</h2>
+
+          <p class="main__right-num-desc mb-2 text-end">Count: <span class="count">0</span></p>
+
+          <p class="main__right-mark-desc mb-2 text-end">Average mark: <span class="mark-num">0</span> %</p>
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name & Surname</th>
+                <th>Marked date</th>
+                <th>Mark</th>
+                <th>Status</th>
+                <th>Edit</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody class="table-wrapper">
+
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ADD STUDENT MODAL -->
+
+  <div class="modal-window d-none">
+    <div class="modal-body">
+      <div class="card bg-transparent p-2 shadow">
+        <h4 class="mb-4">Add student</h4>
+        <span class="close position-absolute">
+          <i class="bi bi-x-lg fs-3 text-danger"></i>
+        </span>
+
+        <form class="form">
+          <label for="isname">
+            Name
+            <input type="text" class="name-input form-control mb-3" placeholder="Enter a name ..." id="setname" required/>
+          </label>
+
+          <label for="lastname">
+            Lastname
+            <input type="text" class="lastname-input form-control mb-3" placeholder="Enter a lastname ..."
+            id="setlastname" required/>
+          </label>
+
+          <label for="mark">
+            Mark
+            <input type="number" min="0" max="100" class="mark-input form-control mb-3" placeholder="Enter a mark ..." id="setmark" required/>
+          </label>
+
+          <button class="btn btn-primary set-btn">Add student</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- EDIT MODAL -->
+
+  <div class="edit-modal-window d-none">
+    <div class="edit-modal-body">
+      <div class="card bg-transparent p-2 shadow">
+        <h4 class="mb-4">Edit student</h4>
+        <span class="edit-close position-absolute">
+          <i class="bi bi-x-lg fs-3 text-danger"></i>
+        </span>
+
+        <form class="edit-form">
+          <label for="isname">
+            Name
+            <input type="text" class="edit-name-input form-control mb-3" placeholder="Enter a name ..." id="setname" required/>
+          </label>
+
+          <label for="lastname">
+            Lastname
+            <input type="text" class="edit-lastname-input form-control mb-3" placeholder="Enter a lastname ..."
+            id="setlastname" required/>
+          </label>
+
+          <label for="mark">
+            Mark
+            <input type="number" min="0" max="100" class="edit-mark-input form-control mb-3" placeholder="Enter a mark ..." id="setmark" required/>
+          </label>
+
+          <button class="btn btn-warning edit-set-btn">Edit student</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="./js/utils.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+</html>
